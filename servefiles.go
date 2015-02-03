@@ -14,7 +14,8 @@ func main() {
 	flag.Parse()
 	args := flag.Args()
 	if len(args) == 1 {
-		panic(http.ListenAndServe(fmt.Sprintf(":%d", *port), http.FileServer(http.Dir(args[0]))))
+		fmt.Printf("Serving files from %s at http://localhost:%d/\n", args[0], *port)
+		http.ListenAndServe(fmt.Sprintf(":%d", *port), http.FileServer(http.Dir(args[0])))
 	}
 	flag.Usage()
 }
