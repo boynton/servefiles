@@ -1,2 +1,8 @@
 # servefiles
-A minimal static file HTTP server.
+
+A trivial static file HTTP server, written in Go
+
+## Usage
+
+    Usage: servefiles [-p <port>] directory
+
