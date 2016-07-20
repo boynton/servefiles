@@ -11,7 +11,7 @@ func main() {
 	flag.Usage = func() {
 		fmt.Println("Usage: servefiles [-e [host]:port] directory")
 	}
-	endpoint := flag.String("e", "localhost:8080", "endpoint ([host]:port")
+	endpoint := flag.String("e", ":8080", "endpoint ([host]:port")
 	flag.Parse()
 	args := flag.Args()
 	if len(args) == 1 && len(*endpoint) > 0 {
